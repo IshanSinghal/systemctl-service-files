@@ -29,3 +29,8 @@ View ouput from:
 ```
 $ sudo journalctl -u trial
 ```
+
+Check all options for service file using man command:
+```
+$ man systemd.service
+```
