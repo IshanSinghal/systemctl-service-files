@@ -1,0 +1,10 @@
+[Unit]
+Description=webserver container service
+
+[Service]
+Restart=always
+ExecStart=/usr/bin/podman run --rm -ti -p 80:80 -v /var/www/html/:/var/www/html:z --name webserver webimage
+ExecStop=/usr/bin/podman stop -t 30 webserver
+
+[Install]
+WantedBy=local.target
