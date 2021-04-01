@@ -18,11 +18,14 @@ $ systemctl enable webserver.service
 ```
 
 Incase you change anything in .service file:
-
 ```
 $ systemctl daemon-reload
 ```
 
 
-Here you can use any other script such as:
-ExecStart=/home/ishan/trial.sh
+You can use any other script such as: ExecStart=/home/ishan/trial.sh
+
+View ouput from:
+```
+$ sudo journalctl -u trial
+```
